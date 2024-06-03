@@ -1,0 +1,75 @@
+"id","name","description","code","user_id","created_at","updated_at"
+1,SQL script #1,An Example Generate CSV file Using SQL Script,"set echo off
+set verify off
+set term off
+set space 0
+set feedback off
+set heading off
+set pages 10000
+set line 10000
+set trims on
+
+Spool emp.csv
+
+SELECT chr(34)||empno||chr(34)||','||
+       chr(34)||ename||chr(34)||','||
+       chr(34)||job||chr(34)||','
+       ||sal
+  FROM EMP
+ WHERE deptno = 30;
+
+Spool off
+
+exit",1,"2024-01-02 15:21:55","2024-01-02 15:21:55"
+2,postgresql script #92,SQL скрипт показывает количество активныз соединений с ,"select pid as process_id, 
+       usename as username, 
+       datname as database_name, 
+       client_addr as client_address, 
+       application_name,
+       backend_start,
+       state,
+       state_change
+from pg_stat_activity;",2,"2024-01-02 17:45:47","2024-01-02 17:45:47"
+3,postgresql script #65,"Получим список баз и некоторые их параметры (владелец, кодировка и кое-что другое).","SELECT
+    inet_server_addr() AS ""Server"",
+    d.datname as ""Name"",
+    pg_catalog.pg_get_userbyid(d.datdba) as ""Owner"",
+    pg_catalog.pg_encoding_to_char(d.encoding) as ""Encoding"",
+    d.datcollate as ""Collate"",
+    d.datctype as ""Ctype"",
+    pg_catalog.array_to_string(d.datacl, E'\n') AS ""Access privileges""
+FROM pg_catalog.pg_database d
+ORDER BY 2;",4,"2024-01-02 18:12:26","2024-01-02 18:12:26"
+4,"1235trgtg",rgertgergre,create database f1287677g;,2,"2024-02-12 19:07:55","2024-02-12 19:07:55"
+5,def34e,werwer,ewrewr,3,"2024-02-12 19:38:51","2024-02-12 19:38:51"
+6,SQL script 555,Это тестовый sql script,"USE DB;
+SELECT * from DB
+where ID=1;
+",5,"2024-03-17 20:27:38","2024-03-17 20:27:38"
+7,sdfdsf,sdfsdf,"ываываывфа
+ываыва
+sadfsadf
+asdfsadf
+",5,"2024-03-19 19:02:46","2024-03-19 19:02:46"
+8,Новый скрипт,Новый новый скрипт,"iojhre
+khjrdk
+dsfr
+
+pikgvsd",1,"2024-03-19 19:04:48","2024-03-19 19:04:48"
+9,Скрипт_Камиллы,join таблиц,"select hs.name #>> '{ru}' as ""Название"",
+hb.slug as ""Слаг объекта"",
+hs.address #>> '{settlement, ru}' as ""Город"",
+hs.address #>> '{region, ru}' as ""Регион"",
+hs.address #>> '{text}' as ""Текст"",
+hd.status,
+hs.hotel_id
+from hotel_source hs
+left join hotel_base hb on (hs.hotel_id = hb.hotel_id)
+left join hotel_distribution hd on (hs.id = hd.hotel_source_id)
+where source_system = 'travelline'
+and (hd.status = 'active' or hd.status = 'inactive')",6,"2024-03-20 14:53:09","2024-03-20 14:53:09"
+10,Скрипт_2,Пробный скрипт,"123445",6,"2024-03-21 15:34:54","2024-03-21 15:34:54"
+11,Скрипт_Камиллы_2,gfdhfghsg,etetryeye,6,"2024-03-22 14:40:15","2024-03-22 14:40:15"
+12,Test_1,Test_1,"Test_1:
+It's testing script for courswork.",1,"2024-04-03 16:18:31","2024-04-03 16:18:31"
+13,Test_script,Test_script,Testing script for coursework.,6,"2024-04-10 14:59:36","2024-04-10 14:59:36"

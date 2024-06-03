@@ -1,0 +1,7 @@
+"id","name","mv_user_id","email","password","last_login_on","is_admin","allow_add","allow_see_others","allow_edit_others","allow_delete_others","created_at","updated_at","folder_id"
+1,Obi-van Kenobi,293484,kamila.titova@outlook.com,$2b$13$ITBSYjV71z7H4t9IjcemVe9hk3urxYvzWTC3zOWBAC5xoHdGJ75vK,"2024-01-02 21:12:58.719119",1,1,1,0,0,"2024-01-02 14:42:27","2024-01-02 18:12:58",7
+2,Yoda,354546,nikolaev-a@yandex.ru,$2b$13$ir4Dr1XCSCtbXwbhcdhKMuqHOxcMrtkBPdbXKB8E7ABpisfIKdQa2,"2024-03-17 22:53:33.825716",1,1,1,0,0,"2024-01-02 16:08:49","2024-03-17 19:53:33",5
+3,Mr. Spock,484846,julia.titova@outlook.com,$2b$13$nVd7uTvWZ4nl6pjJ/XM9FumhLhu6J1Pl4jJ7m6uuI6goOQ8LbxOz2,"2024-02-12 22:37:11.551360",0,0,0,0,0,"2024-01-02 16:17:58","2024-02-12 19:37:11",7
+4,James Kirk,594575,ivan.titov@outlook.com,$2b$13$NpMiVe84OjuATofHBEBOR.ic.8yukfkIxQezVh9Cbzezz81urxrWG,"2024-01-02 21:04:40.232888",0,1,1,0,0,"2024-01-02 18:11:09","2024-01-02 18:11:09",6
+5,Christopher Pike,565465,alexander.nikolaev@gmail.com,$2b$13$7vyiLnTeT4QvNSYqbxgZAOzZDZDLA1eH9IfZuOjIa6vdyv856VAKi,"2024-03-19 22:02:00.511439",1,1,1,1,1,"2024-03-17 20:17:35","2024-03-19 19:02:00",2
+6,Sheldon Cooper,164098,Kamilla.Titova@mvideo.ru,$2b$13$ROi38n0s3IKHC32DmR/hEeizdNz893jO/OXRpRbpftEqTWGdg4y3G,"2024-06-03 19:09:00.721974",0,1,1,0,0,"2024-03-20 14:47:15","2024-06-03 16:09:00",1
