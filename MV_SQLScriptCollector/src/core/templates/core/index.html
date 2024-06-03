@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block css %}
+    <link rel="preload stylesheet" type="text/css" crossorigin="anonymous" as="style"
+          href="{{ url_for('core.static', filename='css/sidebars.css') }}">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />-->
+<!--<link rel="stylesheet" href="https://bootstraptema.ru/snippets/menu/2017/vam.md.css" />-->
+<!--<script src="https://bootstraptema.ru/plugins/jquery/jquery-1.11.3.min.js"></script>-->
+<!--<script src="https://bootstraptema.ru/snippets/menu/2017/vam.md.js"></script>-->
+{% endblock %}
+{% block content %}
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div class="col-md-4 col-md-offset-4">-->
+
+<!-- <div id="jquery-accordion-menu" class="jquery-accordion-menu blue">-->
+<!--  <div class="jquery-accordion-menu-header" id="form"></div>-->
+<!--    <ul id="demo-list">-->
+<!--      <li><a href="#"><i class="fa fa-archive"></i>Data Office</a>-->
+<!--      {% for folder in folders %}-->
+<!--      <ul class="submenu">-->
+<!--        <li><a href="#" style="background-color: #ffff; color: #000;">{{ folder.folder_name }}</a>-->
+<!--          {% for user in folder.users %}-->
+<!--          <ul class="submenu">-->
+<!--            <li><a href="#" style="background-color: #ffff; color: #000;">{{ user.name }}</a>-->
+<!--              {% for script in user.scripts %}-->
+<!--              <ul class="submenu">-->
+<!--                <li><a href="#" style="background-color: #ffff; color: #000;">{{ script.name }}</a></li>-->
+<!--              </ul>-->
+<!--              {% endfor %}-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--          {% endfor %}-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--      {% endfor %}-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--</div>&lt;!&ndash; ./col-md-4 col-md-offset-4 &ndash;&gt;-->
+<!--</div>&lt;!&ndash; ./row &ndash;&gt;-->
+<!--</div>&lt;!&ndash; ./container &ndash;&gt;-->
+<!--<script src="{{ url_for('core.static', filename='js/index.js') }}"></script>-->
+<div class="d-flex flex-nowrap">
+        <div class="flex-shrink-0 p-3" style="width: 280px;">
+            <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+                <span class="fs-5 fw-semibold">Data Office</span>
+            </a>
+            {% for folder in folders %}
+                <ul class="list-unstyled ps-0">
+                    <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#folder_{{ folder.id }}" aria-expanded="false">
+                            {{ folder.folder_name }}
+                        </button>
+                        <div class="collapse" id="folder_{{ folder.id }}">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal small">
+                                {% for user in folder.users %}
+                                    <li class="ms-3">
+                                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                                                data-bs-toggle="collapse" data-bs-target="#user_{{ user.id }}" aria-expanded="false">
+                                            {{ user.name }}
+                                        </button>
+                                        <div class="collapse" id="user_{{ user.id }}">
+                                            <ul class="btn-toggle-nav fw-normal pb-1">
+                                                {% for script in user.scripts %}
+                                                    <li class="ms-3 greeting">
+                                                        <span class="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                                                            {{ script.name }}
+                                                        </span>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            {% endfor %}
+        </div>
+        <div class="b-divider b-vr"></div>
+{#        <div class="row pt-3">#}
+{#            <div class="col-md-4"></div>#}
+{#            <div class="col-md-4">#}
+{#                <main class="w-100 m-auto">#}
+{#                    <div class="form-floating">#}
+{#                        <span class="form-control mb-2" id="floatingLabelName">{{ script.name }}</span>#}
+{#                        <label for="floatingInput">Название скрипта</label>#}
+{#                    </div>#}
+{#                    <div class="form-floating">#}
+{#                        <span class="form-control mb-2" id="floatingLabelName">{{ script.description}}</span>#}
+{#                        <label for="floatingInput">Описание скрипта</label>#}
+{#                    </div>#}
+{#                    <div class="form-floating">#}
+{#                        <span class="form-control mb-2" id="floatingLabelName">{{ script.user_id}}</span>#}
+{#                        <label for="floatingInput">Автор скрипта</label>#}
+{#                    </div>#}
+{#                    <div class="form-floating">#}
+{#                        <span class="form-control mb-2" id="floatingLabelName" style="height: 400px">{{ script.code}}</span>#}
+{#                        <label for="floatingInput">Код скрипта</label>#}
+{#                    </div>#}
+{#                </main>#}
+{#            </div>#}
+{#            <div class="col-md-4"></div>#}
+{#        </div>#}
+</div>
+{% endblock %}
